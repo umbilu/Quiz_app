@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="firstQuest">What is a warning sign that you are driving on ice?</string>
+    <string name="secondQuest">What does the Highway Code say you should carry in case you break down?</string>
+    <string name="thirdQuest">You are driving a car with a trailer on a dual carriageway. What is the speed limit?</string>
+    <string name="fourQuest">The rear of your car skids to the right - what should you do?</string>
+    <string name="fivequest">You are travelling at 60mph. What is the stopping distance?</string>
+    <string name="firstAnsOne">The steering feels very heavy</string>
+    <string name="firstAnsTwo">You start imagining you are hearing Ravel's Bolero</string>
+    <string name="firstAnsThree">The tyres make hardly any noise</string>
+    <string name="secondAnsOne">A spade, warm clothing, a warm drink and emergency food</string>
+    <string name="secondAnsTwo">A Gameboy with some games you are not yet sick of, and a collection of local curry and pizza takeaway menus from places which deliver</string>
+    <string name="secondAnsThree">Jump leads, blankets and a mobile phone to contact breakdown services</string>
+    <string name="thirdAnsOne">60mph</string>
+    <string name="thirdAnsTwo">70mph</string>
+    <string name="thirdAnsthree">80mph</string>
+    <string name="fourAnsOne">Kiss your ass goodbye</string>
+    <string name="fourAnsTwo">Steer quickly and smoothly to the left</string>
+    <string name="fourAnsThree">Steer quickly and smoothly to the right</string>
+    <string name="fiveAnsOne">96 metres (315ft)</string>
+    <string name="fiveAnsTwo">The way I brake, sunshine, it's about a metre</string>
+    <string name="fiveAnsThree">73 metres (240ft)</string>
+
+
+</resources>
