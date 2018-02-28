@@ -15,20 +15,44 @@ import com.example.android.quizapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    int driveResult = 0;
+
+    private String getUserName() {
+        EditText userInputLastName = findViewById(R.id.nameField);
+        String name = userInputLastName.getText().toString();
+        return name;
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        Button submitButton = (Button) findViewById(R.id.submitButton);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(driveResult <= 0) {
+                    Toast.makeText(getApplicationContext(),
+                             String.name + "you are bed driver!", Toast.LENGTH_SHORT).show();
+                }
+                else if(driveResult <= 5) {
+
+                    Toast.makeText(getApplicationContext(),
+                            String.name + "you are good driver!", Toast.LENGTH_SHORT).show();
+                }
+                else if(driveResult <= 10) {
+
+                    Toast.makeText(getApplicationContext(),
+                            String.name + "you are best driver!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 
-    int driveResult = 5;
 
-    private String getUserName() {
-        EditText userInputLastName = (EditText) findViewById(R.id.nameField);
-        String name = userInputLastName.getText().toString();
-        return name;
-    }
 
     public void onRadioButtonClickedOne(View view) {
         // Is the button now checked?
@@ -39,15 +63,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.radiofirstAnsOne:
                 if (checked)
                     driveResult++;
-                    break;
+                break;
             case R.id.radiofirstAnsTwo:
                 if (checked)
                     driveResult--;
-                    break;
+                break;
             case R.id.radiofirstAnsThree:
                 if (checked)
                     driveResult--;
-                    break;
+                break;
         }
     }
 
@@ -142,14 +166,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    Button submitButton = (Button) findViewById(R.id.submitButton);
-        submitButton.setOnClickListener(new View.OnClickListener() {
-        public void onClick(View v) {
-            Toast.makeText(getApplicationContext(),
-                    "Button Clicked!", Toast.LENGTH_SHORT).show();
-        }
-    });
 }
-
 
