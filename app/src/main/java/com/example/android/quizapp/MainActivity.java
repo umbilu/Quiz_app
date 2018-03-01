@@ -19,32 +19,31 @@ public class MainActivity extends AppCompatActivity {
 
     int driveResult = 0;
 
-    EditText userNameField = (EditText) findViewById(R.id.nameField);
-    String userName = userNameField.getText().toString();
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Button submitButton = (Button) findViewById(R.id.submitButton);
         submitButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
+                EditText userNameField = (EditText) findViewById(R.id.nameField);
+                String userName = userNameField.getText().toString();
+
                 if(driveResult <= 0) {
                     Toast.makeText(getApplicationContext(),
-                            userName + "you are bed driver!", Toast.LENGTH_SHORT).show();
+                            userName + " " + "you are bed driver!", Toast.LENGTH_SHORT).show();
+                }
+                else if(driveResult <= 3) {
+
+                    Toast.makeText(getApplicationContext(),
+                            userName + " " + "you are good driver!", Toast.LENGTH_SHORT).show();
                 }
                 else if(driveResult <= 5) {
 
                     Toast.makeText(getApplicationContext(),
-                            userName + "you are good driver!", Toast.LENGTH_SHORT).show();
-                }
-                else if(driveResult <= 10) {
-
-                    Toast.makeText(getApplicationContext(),
-                            userName + "you are best driver!", Toast.LENGTH_SHORT).show();
+                            userName + " " + "you are best driver!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
