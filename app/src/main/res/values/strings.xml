@@ -5,6 +5,7 @@
     <string name="thirdQuest">You are driving a car with a trailer on a dual carriageway. What is the speed limit?</string>
     <string name="fourQuest">The rear of your car skids to the right - what should you do?</string>
     <string name="fivequest">You are travelling at 60mph. What is the stopping distance?</string>
+    <string name="sixquest">When driving in fog, you should use fog lights only, high beams or low beams </string>
     <string name="firstAnsOne">The steering feels very heavy</string>
     <string name="firstAnsTwo">You start imagining you are hearing Ravel's Bolero</string>
     <string name="firstAnsThree">The tyres make hardly any noise</string>
@@ -20,6 +21,9 @@
     <string name="fiveAnsOne">96 metres (315ft)</string>
     <string name="fiveAnsTwo">The way I brake, sunshine, it's about a metre</string>
     <string name="fiveAnsThree">73 metres (240ft)</string>
+    <string name="sixAnsone">fog lights only</string>
+    <string name="sixAnstwo">high beams</string>
+    <string name="sixAnsthree">low beams</string>
 
 
 </resources>

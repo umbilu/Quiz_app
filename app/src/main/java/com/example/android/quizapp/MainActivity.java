@@ -28,22 +28,43 @@ public class MainActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
+
+                EditText answerTextField = (EditText) findViewById(R.id.answerField);
+                String answerField = answerTextField.getText().toString();
+
+                if(answerField == getString(R.string.sixAnsone)) {
+
+                    driveResult++;
+                }
+                else if(answerField == getString(R.string.sixAnstwo)) {
+
+                    driveResult--;
+                }
+                else if(answerField == getString(R.string.sixAnsthree)) {
+
+                    driveResult--;
+
+                }
+
+
                 EditText userNameField = (EditText) findViewById(R.id.nameField);
                 String userName = userNameField.getText().toString();
 
                 if(driveResult <= 0) {
+
                     Toast.makeText(getApplicationContext(),
-                            userName + " " + "you are bed driver!", Toast.LENGTH_SHORT).show();
+                            userName + " " + "your score is " + " " + driveResult + " " + "you are bed driver!", Toast.LENGTH_LONG).show();
                 }
                 else if(driveResult <= 3) {
 
                     Toast.makeText(getApplicationContext(),
-                            userName + " " + "you are good driver!", Toast.LENGTH_SHORT).show();
+                            userName + " " + "your score is " + " " + driveResult + " " + "you are good driver!", Toast.LENGTH_LONG).show();
                 }
                 else if(driveResult <= 5) {
 
                     Toast.makeText(getApplicationContext(),
-                            userName + " " + "you are best driver!", Toast.LENGTH_SHORT).show();
+                            userName + " " + "your score is " + " " + driveResult + " " + "you are best driver!", Toast.LENGTH_LONG).show();
+
                 }
             }
         });

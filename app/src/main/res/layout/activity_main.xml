@@ -175,6 +175,22 @@
                 android:onClick="onRadioButtonClickedFour"/>
         </RadioGroup>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:text="@string/sixquest"
+            android:textAllCaps="true" />
+
+        <EditText
+            android:id="@+id/answerField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:inputType="textMultiLine" />
+
 
         <Button
             android:layout_width="wrap_content"
