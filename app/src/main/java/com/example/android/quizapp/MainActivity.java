@@ -1,6 +1,7 @@
 package com.example.android.quizapp;
 
 import android.app.Activity;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,16 +14,14 @@ import android.widget.Toast;
 
 import com.example.android.quizapp.R;
 
+
 public class MainActivity extends AppCompatActivity {
 
     int driveResult = 0;
 
-    private String getUserName() {
-        EditText userInputLastName = findViewById(R.id.nameField);
-        String name = userInputLastName.getText().toString();
-        return name;
+    EditText userNameField = (EditText) findViewById(R.id.nameField);
+    String userName = userNameField.getText().toString();
 
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,17 +34,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(driveResult <= 0) {
                     Toast.makeText(getApplicationContext(),
-                             String.name + "you are bed driver!", Toast.LENGTH_SHORT).show();
+                            userName + "you are bed driver!", Toast.LENGTH_SHORT).show();
                 }
                 else if(driveResult <= 5) {
 
                     Toast.makeText(getApplicationContext(),
-                            String.name + "you are good driver!", Toast.LENGTH_SHORT).show();
+                            userName + "you are good driver!", Toast.LENGTH_SHORT).show();
                 }
                 else if(driveResult <= 10) {
 
                     Toast.makeText(getApplicationContext(),
-                            String.name + "you are best driver!", Toast.LENGTH_SHORT).show();
+                            userName + "you are best driver!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
