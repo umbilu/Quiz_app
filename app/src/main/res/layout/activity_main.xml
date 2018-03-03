@@ -199,8 +199,7 @@
             android:layout_gravity="center"
             android:textSize="30dp"
             android:text="Check Drive"
-            android:layout_marginTop="20dp"
-            android:onClick="btnSubmit"/>
+            android:layout_marginTop="20dp"/>
 
 
 

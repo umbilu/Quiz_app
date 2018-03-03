@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     int driveResult = 0;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,38 +30,30 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                EditText answerTextField = (EditText) findViewById(R.id.answerField);
-                String answerField = answerTextField.getText().toString();
-
-                if(answerField == getString(R.string.sixAnsone)) {
-
-                    driveResult++;
-                }
-                else if(answerField == getString(R.string.sixAnstwo)) {
-
-                    driveResult--;
-                }
-                else if(answerField == getString(R.string.sixAnsthree)) {
-
-                    driveResult--;
-
-                }
-
 
                 EditText userNameField = (EditText) findViewById(R.id.nameField);
                 String userName = userNameField.getText().toString();
 
-                if(driveResult <= 0) {
+                EditText answerTextField = (EditText) findViewById(R.id.answerField);
+                String answerField = answerTextField.getText().toString();
+
+                String answerSix = getResources().getString(R.string.sixAnsthree);
+
+                if (answerField.equals(answerSix)) {
+
+                    driveResult++;
+                }
+
+
+                if (driveResult <= 2) {
 
                     Toast.makeText(getApplicationContext(),
                             userName + " " + "your score is " + " " + driveResult + " " + "you are bed driver!", Toast.LENGTH_LONG).show();
-                }
-                else if(driveResult <= 3) {
+                } else if (driveResult <= 3) {
 
                     Toast.makeText(getApplicationContext(),
                             userName + " " + "your score is " + " " + driveResult + " " + "you are good driver!", Toast.LENGTH_LONG).show();
-                }
-                else if(driveResult <= 5) {
+                } else if (driveResult <= 6) {
 
                     Toast.makeText(getApplicationContext(),
                             userName + " " + "your score is " + " " + driveResult + " " + "you are best driver!", Toast.LENGTH_LONG).show();
@@ -68,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
 
@@ -83,47 +75,21 @@ public class MainActivity extends AppCompatActivity {
                 if (checked)
                     driveResult++;
                 break;
-            case R.id.radiofirstAnsTwo:
-                if (checked)
-                    driveResult--;
-                break;
-            case R.id.radiofirstAnsThree:
-                if (checked)
-                    driveResult--;
-                break;
         }
     }
 
     public void onCheckboxClickedOne(View view) {
         // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
+        CheckBox checkBoxAnsA = findViewById(R.id.checkboxSecondAnsOne);
+        CheckBox checkBoxAnsB = findViewById(R.id.checkboxSecondAnsTwo);
 
-        // Check which checkbox was clicked
-        switch (view.getId()) {
-            case R.id.checkboxSecondAnsOne:
-                if (checked)
-                    driveResult++;
-                else
-                    driveResult--;
-                break;
-            case R.id.checkboxSecondAnsTwo:
-                if (checked)
-                    driveResult--;
-                else
-                    driveResult++;
-                break;
-            case R.id.checkboxSecondAnsThree:
-                if (checked)
-                    driveResult--;
-                else
-                    driveResult++;
-                break;
-
+        if (checkBoxAnsA.isChecked() && checkBoxAnsB.isChecked()) {
+            driveResult++;
         }
     }
 
     public void onRadioButtonClickedTwo(View view) {
-
+        // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
@@ -132,19 +98,11 @@ public class MainActivity extends AppCompatActivity {
                 if (checked)
                     driveResult++;
                 break;
-            case R.id.radioThirdAnsTwo:
-                if (checked)
-                    driveResult--;
-                break;
-            case R.id.radioThirdAnsthree:
-                if (checked)
-                    driveResult--;
-                break;
         }
     }
 
     public void onRadioButtonClickedThree(View view) {
-
+        // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
@@ -153,37 +111,24 @@ public class MainActivity extends AppCompatActivity {
                 if (checked)
                     driveResult++;
                 break;
-            case R.id.radioFourAnsTwo:
-                if (checked)
-                    driveResult--;
-                break;
-            case R.id.radiofourAnsThree:
-                if (checked)
-                    driveResult--;
-                break;
         }
     }
 
     public void onRadioButtonClickedFour(View view) {
-
+        // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
         switch (view.getId()) {
-            case R.id.radiofirstAnsOne:
+            case R.id.radioFiveAnsOne:
                 if (checked)
                     driveResult++;
-                break;
-            case R.id.radioFiveAnsTwo:
-                if (checked)
-                    driveResult--;
-                break;
-            case R.id.radioFiveAnsThree:
-                if (checked)
-                    driveResult--;
                 break;
         }
     }
 
+
+
 }
+
 
