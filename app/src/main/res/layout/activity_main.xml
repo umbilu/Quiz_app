@@ -197,7 +197,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/submitButton"
             android:layout_gravity="center"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:text="Check Drive"
             android:layout_marginTop="20dp"/>
 
